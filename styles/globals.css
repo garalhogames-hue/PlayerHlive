@@ -121,10 +121,3 @@
     @apply bg-background text-foreground;
   }
 }
-/* v0 badge kill switch */
-a[href*="v0.dev"],
-a[href*="v0.app"],
-[aria-label*="v0" i],
-[title*="v0" i] {
-  display: none !important;
-}
