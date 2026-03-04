@@ -127,7 +127,7 @@ function setPartyMode(on) {
 
 function reached100() {
   setPartyMode(true);
-  auraNote.textContent = "AURA 100% — modo piscando ativado!";
+  auraNote.textContent = "AURA 100% — modo Orochi ativado!";
   farmBtn.disabled = true;
   resetBtn.hidden = false;
 }
