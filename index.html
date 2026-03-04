@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>tá liso dorme</title>
+
+    <!-- Google Fonts (permitido) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- Fundo em GIF -->
+    <div class="bg" aria-hidden="true"></div>
+
+    <main class="wrap">
+      <section class="card" aria-label="Landing page meme estética">
+        <header class="hero">
+          <p class="kicker">carta aberta sobre tudo isso</p>
+          <h1 class="title">tá liso dorme</h1>
+        </header>
+
+        <!-- Player (sem autoplay) -->
+        <div class="audio">
+          <div class="audio__status">
+            <span class="dot" aria-hidden="true"></span>
+            <span id="audioStatus" class="status" aria-live="polite">pausado.</span>
+          </div>
+
+          <div class="audio__actions">
+            <button
+              id="toggleAudio"
+              class="btn btn--primary"
+              type="button"
+              aria-label="Tocar ou pausar música"
+              aria-pressed="false"
+            >
+              Tocar
+            </button>
+
+            <label class="vol" aria-label="Controle de volume">
+              <span class="vol__label">volume</span>
+              <input
+                id="volume"
+                class="vol__range"
+                type="range"
+                min="0"
+                max="1"
+                step="0.01"
+                value="0.8"
+                aria-label="Volume"
+              />
+            </label>
+          </div>
+
+          <audio id="bgAudio" src="assets/musica.mp3" preload="metadata"></audio>
+        </div>
+
+        <!-- Minigame -->
+        <div class="aura" aria-label="Minigame de farmar aura">
+          <div class="aura__top">
+            <div class="aura__label">
+              <span class="aura__name">aura</span>
+              <span id="auraPercent" class="aura__pct" aria-live="polite">0%</span>
+            </div>
+
+            <div class="aura__note" id="auraNote" aria-live="polite">
+              clique para farmar.
+            </div>
+          </div>
+
+          <div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+            <div id="barFill" class="bar__fill"></div>
+            <div class="bar__shine" aria-hidden="true"></div>
+          </div>
+
+          <div class="aura__actions">
+            <button
+              id="farmAura"
+              class="btn btn--ghost"
+              type="button"
+              aria-label="Farmar aura"
+            >
+              Farmar aura
+            </button>
+
+            <button
+              id="resetAura"
+              class="btn btn--subtle"
+              type="button"
+              aria-label="Resetar aura"
+              hidden
+            >
+              Resetar aura
+            </button>
+          </div>
+        </div>
+
+        <footer class="footer">
+          <span class="hint">Dica: quando bater <strong>100%</strong>, entra no <strong>modo piscando</strong>.</span>
+        </footer>
+      </section>
+    </main>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
